@@ -32,6 +32,13 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Use haml instead of erb
+gem "haml-rails"
+# Use Bootsrap v 3.2
+gem 'bootstrap-sass', '~> 3.2.0'
+# Enable connexion with Youtube API
+gem 'yt', '~> 0.25.5'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
