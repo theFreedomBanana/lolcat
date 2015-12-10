@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
 
-  root 'videos#index'
+  # root 'videos#index' as '/videos'
+  root :to => redirect('/videos')
   
+  get 'videos/results' => 'videos#results'
+  
+  get 'videos' => 'videos#search'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
