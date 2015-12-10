@@ -73,6 +73,9 @@ GEM
       haml (~> 4.0.0)
       nokogiri (~> 1.6.0)
       ruby_parser (~> 3.5)
+    httparty (0.13.7)
+      json (~> 1.8)
+      multi_xml (>= 0.5.2)
     i18n (0.7.0)
     jbuilder (2.3.2)
       activesupport (>= 3.0.0, < 5)
@@ -91,6 +94,7 @@ GEM
     mini_portile2 (2.0.0)
     minitest (5.8.3)
     multi_json (1.11.2)
+    multi_xml (0.5.5)
     nokogiri (1.6.7)
       mini_portile2 (~> 2.0.0.rc2)
     pry (0.10.3)
@@ -175,6 +179,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   dotenv-rails
   haml-rails
+  httparty
   jbuilder (~> 2.0)
   jquery-rails
   pry-rails
