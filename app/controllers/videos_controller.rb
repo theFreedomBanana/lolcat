@@ -1,6 +1,6 @@
 class VideosController < ApplicationController
 
-	def latest
+	def index
 	end
 
 end
