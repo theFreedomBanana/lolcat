@@ -5,11 +5,7 @@ var lolCat = angular.module('lolCat', [
 
 lolCat.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 	$routeProvider
-	.when('/', {
-	controller: 'mostPopularVideosCtrl',
-	templateUrl: 'angular_views/search_results'
-	})
-	.when('/videos/:page_token?', {
+	.when('/videos/:order/:page_token?', {
 	controller: 'mostPopularVideosCtrl',
 	templateUrl: 'angular_views/search_results'
 	});
