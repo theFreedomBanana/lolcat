@@ -49,7 +49,9 @@ end
 
 # Use haml instead of erb
 gem "haml-rails"
-# Use Bootsrap v 3.2
-gem 'bootstrap-sass', '~> 3.2.0'
+# Use Bootsrap
+gem 'bootstrap-sass'
 # http request easier
 gem 'httparty'
+# Adds AngularJS to the asset pipeline
+gem 'angularjs-rails'
