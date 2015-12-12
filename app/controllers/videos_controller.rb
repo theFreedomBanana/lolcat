@@ -4,6 +4,6 @@ class VideosController < ApplicationController
 	end
 
 	def results
-		@result = YtSearch.new("viewCount", params[:page_token])
+		@result = YtSearch.new(params[:order], params[:page_token])
 	end
 end
