@@ -8,6 +8,10 @@ lolCat.config(['$routeProvider', '$locationProvider', function($routeProvider, $
 	.when('/', {
 	controller: 'mostPopularVideosCtrl',
 	templateUrl: 'angular_views/search_results'
+	})
+	.when('/videos/:page_token?', {
+	controller: 'mostPopularVideosCtrl',
+	templateUrl: 'angular_views/search_results'
 	});
 	
 	// Permet de se débarrasser du '#/' dans les url. Va avec le <base href='/'> 'dans application.html'
