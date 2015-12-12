@@ -3,9 +3,12 @@ Rails.application.routes.draw do
   # root 'videos#index' as '/videos'
   root :to => redirect('/videos')
   
+  # here to render videos json data for Angular controller 
   get 'videos/results' => 'videos#results'
+  get 'videos/:page_token/results' => 'videos#results'
   
   get 'videos' => 'videos#search'
+  get 'videos/:page_token' => 'videos#search'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
