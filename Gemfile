@@ -49,7 +49,11 @@ end
 
 # Use haml instead of erb
 gem "haml-rails"
-# Use Bootsrap v 3.2
-gem 'bootstrap-sass', '~> 3.2.0'
+# Use last sproket version to solve glyphicon issue
+gem 'sprockets-rails', '>=2.1.4'
+# Use Bootsrap v 3.3
+gem 'bootstrap-sass', '~> 3.3.5.1'
 # http request easier
 gem 'httparty'
+# Adds AngularJS to the asset pipeline
+gem 'angularjs-rails'

@@ -1,10 +1,15 @@
-Rails.application.routes.draw do
+    Rails.application.routes.draw do
 
-  root 'videos#index'
+  # root 'videos#index' as '/videos'
+  root :to => redirect('/videos/viewCount')
+
+  # here to render videos json data for Angular controller. Keep it first in routes stack
+  get 'videos/:order(/:page_token)/results' => 'videos#results'
   
-  # here to render videos json data 
-  get 'videos/results' => 'videos#index'
+  get 'videos/:order(/:page_token)' => 'videos#search'
 
+
+# Voir s'il est possible de donner une valeur par défaut à un segment dans les route (pour :order)
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

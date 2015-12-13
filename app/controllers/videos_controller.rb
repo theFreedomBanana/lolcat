@@ -1,8 +1,9 @@
 class VideosController < ApplicationController
 
-	def index
-		api_request = YtSearch.new("viewCount")
-		@results = api_request.response["items"]
+	def search
 	end
 
+	def results
+		@result = YtSearch.new(params[:order], params[:page_token])
+	end
 end
