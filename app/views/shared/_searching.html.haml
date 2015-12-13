@@ -1,4 +1,5 @@
-.row
-	.col-md-4.col-md-offset-8#searching
-		=link_to "Most Viewed", "videos/viewCount", class: "btn btn-primary btn-lg"
-		=link_to "Most Recent", "videos/date", class: "btn btn-success btn-lg"
+%ul.nav.navbar-nav#searching_buttons
+	%li.active#most_popular
+		= link_to "Most Popular", "videos/viewCount"
+	%li#most_recent
+		= link_to "Most Recent", "videos/date"
