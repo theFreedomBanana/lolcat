@@ -57,3 +57,5 @@ gem 'bootstrap-sass', '~> 3.3.5.1'
 gem 'httparty'
 # Adds AngularJS to the asset pipeline
 gem 'angularjs-rails'
+# Use Devise for authentication solution
+gem 'devise'
