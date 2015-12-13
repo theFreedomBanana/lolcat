@@ -4,5 +4,9 @@
 			%a{class: "navbar-brand"} LolCat
 		.collapse.navbar-collapse
 			.nav.navbar-nav.navbar-right
-				%button{type: "button", class: "btn btn-default navbar-btn"} Sign in
-				%button{type: "button", class: "btn btn-default navbar-btn"} Sign up
+				- if user_signed_in?
+					%span= current_user.email
+					= render 'shared/sign_out'
+				- else
+					= render 'shared/sign_in'
+					= render 'shared/sign_up'

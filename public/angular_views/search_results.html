@@ -1,37 +1,31 @@
-<div class="container-fluid">
-	<div class="row">
+<div id="video_bloc" class="col-md-8">
+	<iframe id="ytplayer" type="text/html" width="640" height="390" ng-src="{{displayedVideoUrl}}" frameborder="0"></iframe>
+</div>
 
-		<div id="video_bloc" class="col-md-8">
-			<iframe id="ytplayer" type="text/html" width="640" height="390" ng-src="{{displayedVideoUrl}}" frameborder="0"></iframe>
-		</div>
-		
-		<div id="list_bloc" class="col-md-4">
-			<div class="col-md-12 prev_page">
-				<a href="" ng-click=goPrevPage()>
-					<span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
-					<span>Previous page</span>
-				</a>
+<div id="list_bloc" class="col-md-4">
+	<div class="col-md-12 prev_page">
+		<a href="" ng-click=goPrevPage()>
+			<span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+			<span>Previous page</span>
+		</a>
+	</div>
+	<div id="videos_list" class="col-md-10 col-md-offset-1">
+		<ul ng-repeat="video in videos">
+			<div class="col-md-6 col-md-offset-3">
+				<li>
+					<a href="" ng-click="playThisVid(video.id)">
+						<h6>{{video.title}}</h6>
+						<img class="img-responsive" src="{{video.thumbnail}}" alt="{{video.description}}">
+					</a>
+				</li>
 			</div>
-			<div id="videos_list" class="col-md-10 col-md-offset-1">
-				<ul ng-repeat="video in videos">
-					<div class="col-md-6 col-md-offset-3">
-						<li>
-							<a href="" ng-click="playThisVid(video.id)">
-								<h6>{{video.title}}</h6>
-								<img class="img-responsive" src="{{video.thumbnail}}" alt="{{video.description}}">
-							</a>
-						</li>
-					</div>
-				</ul>
-			</div>
-			<div class="col-md-12 next_page">
-				<!-- <a href="videos/?page_token={{nextPageToken}}"> -->
-				<a href="" ng-click=goNextPage()>
-					<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
-					<span>Next page</span>
-				</a>
-			</div>
-		</div>
-
+		</ul>
+	</div>
+	<div class="col-md-12 next_page">
+		<!-- <a href="videos/?page_token={{nextPageToken}}"> -->
+		<a href="" ng-click=goNextPage()>
+			<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+			<span>Next page</span>
+		</a>
 	</div>
 </div>
