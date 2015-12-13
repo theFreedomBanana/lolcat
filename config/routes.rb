@@ -1,5 +1,6 @@
     Rails.application.routes.draw do
 
+  devise_for :users
   # root 'videos#index' as '/videos'
   root :to => redirect('/videos/viewCount')
 
@@ -8,6 +9,8 @@
   
   get 'videos/:order(/:page_token)' => 'videos#search'
 
+  # redirects unvalid routes ro root 
+  get '*path' => redirect('/')
 
 # Voir s'il est possible de donner une valeur par défaut à un segment dans les route (pour :order)
 
