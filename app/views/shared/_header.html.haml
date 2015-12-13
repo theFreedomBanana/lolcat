@@ -1,7 +1,6 @@
-%nav.navbar.navbar-default
+%nav.navbar.navbar-default#header
 	.container-fluid
-		.navbar-header
-			%a{class: "navbar-brand"} LolCat
+		= image_tag("logo.png", :class => "img-responsive navbar-nav", :id => "logo")
 		.collapse.navbar-collapse
 			.nav.navbar-nav.navbar-right
 				- if user_signed_in?
