@@ -6,7 +6,7 @@
 			.nav.navbar-nav.navbar-right
 				- if user_signed_in?
 					%span= current_user.email
-					= render 'shared/sign_out'
+					= render 'shared/menu'
 				- else
 					= render 'shared/sign_in'
 					= render 'shared/sign_up'
