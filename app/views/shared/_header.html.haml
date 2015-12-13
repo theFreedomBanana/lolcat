@@ -1,6 +1,7 @@
 %nav.navbar.navbar-default#header
 	.container-fluid
 		= image_tag("logo.png", :class => "img-responsive navbar-nav", :id => "logo")
+		= render 'shared/searching'			
 		.collapse.navbar-collapse
 			.nav.navbar-nav.navbar-right
 				- if user_signed_in?
