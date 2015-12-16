@@ -63,3 +63,8 @@ gem 'devise'
 gem 'js-routes'
 # Adds CSRF token in angular requests
 gem 'angular_rails_csrf'
+
+group :production do
+  gem 'pg', '0.15.1'
+  gem 'rails_12factor'
+end
