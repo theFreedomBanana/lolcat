@@ -59,3 +59,5 @@ gem 'httparty'
 gem 'angularjs-rails'
 # Use Devise for authentication solution
 gem 'devise'
+# Use rails routes helper in JS files 
+gem 'js-routes'
