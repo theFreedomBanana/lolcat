@@ -1,6 +1,11 @@
     Rails.application.routes.draw do
 
   devise_for :users
+    
+  resources :users do
+    resources :favorites
+  end
+
   # root 'videos#index' as '/videos'
   root :to => redirect('/videos/viewCount')
 

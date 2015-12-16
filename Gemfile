@@ -59,3 +59,7 @@ gem 'httparty'
 gem 'angularjs-rails'
 # Use Devise for authentication solution
 gem 'devise'
+# Use rails routes helper in JS files 
+gem 'js-routes'
+# Adds CSRF token in angular requests
+gem 'angular_rails_csrf'
