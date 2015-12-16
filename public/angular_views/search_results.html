@@ -1,19 +1,19 @@
 <div class="col-md-12">
 	<div class="col-md-6 col-md-offset-1">
 		<div id="video_bloc" class="col-md-12">
-			<iframe id="ytplayer" type="text/html" width="100%" height="480" ng-src="{{displayedVideoUrl}}" frameborder="0"></iframe>
+			<iframe id="ytplayer" type="text/html" width="100%" height="480" ng-src="{{trustedVideoUrl}}" frameborder="0"></iframe>
 		</div>
 		<div id="video_details" class="col-md-12">
-			<h2>Nyan Cat [original]</h2>
+			<h2>{{displayedVideoTitle}}</h2>
 			<hr>
 			<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-			<span><a href="" class="favorite">Add to favorite</a></span>
+			<span><a href="" ng-click="addFavorite()"  class="favorite">Add to favorite</a></span>
 		</div>
 	</div>
 
 	<div id="list_bloc" class="col-md-3">
 		<div class="col-md-12 prev_page">
-			<a href="" ng-click=goPrevPage()>
+			<a href="" ng-click="goPrevPage()">
 				<span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
 				<span>Previous page</span>
 			</a>
@@ -22,7 +22,7 @@
 		<div id="videos_list" class="col-md-12">
 			<ul ng-repeat="video in videos">
 				<li>
-					<a class="col-md-12" href="" ng-click="playThisVid(video.id)">
+					<a class="col-md-12" href="" ng-click="playThisVid(video.id, video.title, video.thumbnail)">
 						<img class="thumbnail img-responsive col-md-5" src="{{video.thumbnail}}" alt="{{video.description}}">
 						<h5 class="videos_title col-md-7">{{video.title}}</h5>
 					</a>
@@ -31,8 +31,7 @@
 		</div>
 		<hr class="col-md-12">
 		<div class="col-md-12 next_page">
-			<!-- <a href="videos/?page_token={{nextPageToken}}"> -->
-			<a href="" ng-click=goNextPage()>
+			<a href="" ng-click="goNextPage()">
 				<span>Next page</span>
 				<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
 			</a>

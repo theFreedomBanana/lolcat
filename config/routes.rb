@@ -1,6 +1,11 @@
     Rails.application.routes.draw do
 
   devise_for :users
+    
+  resources :users do
+    resources :favorites
+  end
+
   # root 'videos#index' as '/videos'
   root :to => redirect('/videos/viewCount')
 
@@ -8,6 +13,9 @@
   get 'videos/:order(/:page_token)/results' => 'videos#results'
   
   get 'videos/:order(/:page_token)' => 'videos#search'
+
+
+
 
   # redirects unvalid routes ro root 
   get '*path' => redirect('/')
